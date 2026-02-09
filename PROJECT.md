@@ -1,5 +1,6 @@
 @TODO:
 
+- Fix: change 'owner name' to 'submitted [days_ago] days ago by [name]', as in layout
 - extras: context menu
 
 # Project Overview
