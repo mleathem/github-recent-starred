@@ -1,0 +1,30 @@
+<div class="">
+  <div class="bg-white shadow-sm rounded-lg overflow-hidden">
+    <ol #resultsList class="divide-y divide-gray-100">
+      @for (repo of repositories(); track repo.name) {
+      <li class="p-3">
+        <app-repo-item [repository]="repo" />
+      </li>
+      }
+    </ol>
+  </div>
+
+  @if (isLoading()) {
+  <div class="flex justify-center items-center py-6">
+    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+    <span class="ml-3 text-gray-600">Loading repositories...</span>
+  </div>
+  }
+
+  @if (error()) {
+  <div class="mt-4 p-4 bg-red-50 border border-red-200 text-red-700 rounded">
+    Error loading repositories: {{ error() }}
+  </div>
+  }
+
+  @if (repositories().length === 0 && !isLoading() && !error()) {
+  <div class="text-center py-8 text-gray-500">
+    No repositories found. Try adjusting your search.
+  </div>
+  }
+</div>

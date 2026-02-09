@@ -1,0 +1,20 @@
+<article class="flex gap-4 p-3">
+  <div class="flex-shrink-0 self-center">
+    <img [src]="repository().owner.avatar_url" [alt]="repository().owner.login" class="w-22 h-22" />
+  </div>
+  <div class="flex-1 min-w-0">
+    <header>
+      <h2 class="text-lg font-semibold truncate">{{ repository().name }}</h2>
+      <p class="text-gray-600 text-sm line-clamp-2">
+        {{ repository().description || '-- No description --' }}
+      </p>
+    </header>
+    <div class="flex gap-4 mt-2 text-sm text-gray-500">
+      <span class="inline-flex items-center gap-1 bg-gray-200 px-1 py-1 text-xs font-semibold">⭐ {{
+        repository().stargazers_count }}</span>
+      <span class="inline-flex items-center gap-1 bg-gray-200 px-1 py-1 text-xs font-semibold">📋 {{
+        repository().open_issues_count }} issues</span>
+      <span class="inline-flex items-center gap-1 font-semibold">{{ repository().owner.login }}</span>
+    </div>
+  </div>
+</article>

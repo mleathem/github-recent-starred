@@ -1,0 +1,10 @@
+ol {
+  --item-bg-odd: #efefef;
+  --item-bg-even: #f9f9f9;
+  > li:nth-child(even) {
+    background-color: var(--item-bg-odd);
+  }
+  > li:nth-child(even) {
+    background-color: var(--item-bg-even);
+  }
+}

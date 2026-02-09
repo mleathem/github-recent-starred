@@ -1,0 +1,29 @@
+Initial chunk files                                  | Names                                             | Raw size
+styles.css                                           | styles                                            | 12.10 kB |
+chunk-CMIEORQY.js                                    | -                                                 | 10.12 kB |
+chunk-L2IPBVLA.js                                    | -                                                 |  4.57 kB |
+spec-app-app.js                                      | spec-app-app                                      |  4.32 kB |
+chunk-CGZBV6BD.js                                    | -                                                 |  4.07 kB |
+spec-app-components-github-results-github-results.js | spec-app-components-github-results-github-results |  1.77 kB |
+spec-app-components-repo-item-repo-item.js           | spec-app-components-repo-item-repo-item           |  1.50 kB |
+init-testbed.js                                      | init-testbed                                      |  1.21 kB |
+
+                                                     | Initial total                                     | 39.66 kB
+
+Application bundle generation complete. [11.477 seconds] - 2026-02-09T12:44:23.503Z
+
+Watch mode enabled. Watching for file changes...
+
+ DEV  v4.0.18 C:/Users/us/OneDrive/Documents/Martin/my_WEBSITES/angular-projects/github-recent-starred
+
+ ✓  github-recent-starred  src/app/components/github-results/github-results.spec.ts (5 tests) 498ms
+     ✓ should create the component  309ms
+ ✓  github-recent-starred  src/app/components/repo-item/repo-item.spec.ts (3 tests) 89ms
+ ✓  github-recent-starred  src/app/app.spec.ts (2 tests) 1972ms
+     ✓ should create the app  765ms
+     ✓ should render title  1201ms
+
+ Test Files  3 passed (3)
+      Tests  10 passed (10)
+   Start at  13:44:27
+   Duration  10.76s (transform 993ms, setup 5.46s, import 966ms, tests 2.56s, environment 13.34s)

@@ -1,8 +1,17 @@
 import { TestBed } from '@angular/core/testing';
+import { describe, it, beforeEach, expect, vi } from 'vitest';
 import { App } from './app';
 
 describe('App', () => {
   beforeEach(async () => {
+    // Mock IntersectionObserver for Vitest
+    class MockIntersectionObserver {
+      observe = vi.fn();
+      unobserve = vi.fn();
+      disconnect = vi.fn();
+    }
+    globalThis.IntersectionObserver = MockIntersectionObserver as any;
+
     await TestBed.configureTestingModule({
       imports: [App],
     }).compileComponents();
