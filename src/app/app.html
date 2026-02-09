@@ -5,7 +5,11 @@
       <p>Most starred GitHub repositories created in the last 30 days</p>
     </header>
     <div class="content space-y-6">
+      @if (permissionGranted()) {
       <app-github-results />
+      } @else {
+      <app-gdpr-permission (permissionGranted)="onPermissionGranted()" />
+      }
     </div>
   </div>
 </main>
