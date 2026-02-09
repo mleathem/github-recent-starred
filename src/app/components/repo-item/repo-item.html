@@ -14,7 +14,9 @@
         repository().stargazers_count }}</span>
       <span class="inline-flex items-center gap-1 bg-gray-200 px-1 py-1 text-xs font-semibold">📋 {{
         repository().open_issues_count }} issues</span>
-      <span class="inline-flex items-center gap-1 font-semibold">{{ repository().owner.login }}</span>
+      <span class="inline-flex items-center gap-1 font-semibold">
+        {{ daysAgoText() }} by <strong class="font-bold">{{ repository().owner.login }}</strong>
+      </span>
     </div>
   </div>
 </article>
