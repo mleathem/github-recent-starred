@@ -7,7 +7,6 @@ import { GithubRepository } from '../../models/github-repo.interface';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './repo-item.html',
-  styleUrl: './repo-item.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RepoItemComponent {
