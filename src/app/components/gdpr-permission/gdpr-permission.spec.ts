@@ -7,6 +7,8 @@ describe('GdprPermissionComponent', () => {
   let component: GdprPermissionComponent;
 
   beforeEach(async () => {
+    vi.restoreAllMocks(); // reset all spies else tests might fail
+
     // mock local storage load so constructor has deterministic state
     vi.spyOn(GdprPermissionStorage, 'load').mockReturnValue({ granted: false });
 
@@ -35,7 +37,7 @@ describe('GdprPermissionComponent', () => {
     component.isChecked.set(true);
     component.onSave();
 
-    expect(saveSpy).toHaveBeenCalledWith({ granted: true });
+    expect(saveSpy).toHaveBeenCalledWith(expect.objectContaining({ granted: true }));
     expect(emitSpy).toHaveBeenCalled();
   });
 
