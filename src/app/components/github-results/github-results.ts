@@ -17,6 +17,7 @@ import { RepoItemComponent } from '../repo-item/repo-item';
   standalone: true,
   imports: [CommonModule, RepoItemComponent],
   templateUrl: './github-results.html',
+  styleUrl: './github-results.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GithubResultsComponent {
