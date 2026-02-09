@@ -7,5 +7,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('github-recent-starred');
+  protected readonly title = signal('Trending Repos');
 }

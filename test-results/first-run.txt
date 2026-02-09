@@ -1,0 +1,21 @@
+Initial chunk files | Names         | Raw size
+
+Expected: "Hello, github-recent-starred"
+Received: "Trending Repos"
+
+ ❯ src/app/app.spec.ts:21:55
+     19|     await fixture.whenStable();
+     20|     const compiled = fixture.nativeElement as HTMLElement;
+     21|     expect(compiled.querySelector('h1')?.textContent).toContain('Hello…
+       |                                                       ^
+     22|   });
+     23| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  09:05:19
+   Duration  9.69s (transform 212ms, setup 1.50s, import 94ms, tests 329ms, envi
+ronment 6.89s)

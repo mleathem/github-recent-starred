@@ -1,0 +1,26 @@
+Initial chunk files | Names         | Raw size
+chunk-CGZBV6BD.js   | -             |  4.07 kB |
+spec-app-app.js     | spec-app-app  |  3.35 kB |
+init-testbed.js     | init-testbed  |  1.21 kB |
+styles.css          | styles        | 57 bytes |
+
+                    | Initial total |  8.69 kB
+
+Application bundle generation complete. [5.254 seconds] - 2026-02-09T08:08:01.45
+4Z
+
+Watch mode enabled. Watching for file changes...
+
+ DEV  v4.0.18 C:/Users/us/OneDrive/Documents/Martin/my_WEBSITES/angular-projects
+/github-recent-starred
+
+ ✓  github-recent-starred  src/app/app.spec.ts (2 tests) 190ms
+   ✓ App (2)
+     ✓ should create the app 155ms
+     ✓ should render title 31ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  09:08:02
+   Duration  4.76s (transform 186ms, setup 1.36s, import 75ms, tests 190ms, envi
+ronment 2.46s)
