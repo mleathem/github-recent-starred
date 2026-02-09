@@ -1,9 +1,5 @@
 @TODO:
 
-- get Repos from GitHub API
-- display results list
-- add pagination: infinite scroll
-- add GDPR compliance: consent before API call (localStorage)
 - extras: context menu
 
 # Project Overview
