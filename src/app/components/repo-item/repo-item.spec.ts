@@ -44,6 +44,15 @@ describe('RepoItemComponent', () => {
     expect(component.repository()).toEqual(mockRepository);
   });
 
+  it('computes daysAgoText correctly', () => {
+    expect(component.daysAgoText()).toContain('Submitted');
+  });
+
+  it('renders the menu container', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('[ngmenu]')).toBeTruthy();
+  });
+
   it('should render without errors', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('button')).toBeTruthy();
