@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators';
 /*
   eg.
   https://api.github.com/search/repositories?q=created:>[Start_Date]&sort=stars&order=desc
-  https://api.github.com/search/repositories?q=created:>09-02-2026&sort=stars&order=desc
+  https://api.github.com/search/repositories?q=created:>2026-02-02&sort=stars&order=desc
 
   pagination:
   https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc&page=2
