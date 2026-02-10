@@ -36,6 +36,10 @@ export class RepoItemComponent {
     window.open(this.repository().html_url, '_blank');
   }
 
+  public openGithubIssuesUrl() {
+    window.open(this.repository().html_url + '/issues', '_blank');
+  }
+
   public copyGithubUrl() {
     navigator.clipboard.writeText(this.repository().html_url);
   }

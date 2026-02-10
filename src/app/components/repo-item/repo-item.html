@@ -25,15 +25,15 @@
   </button>
 
   <!-- Inline ARIA menu -->
-  <div ngMenu
-    class="menu w-56 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
-    #repoMenu="ngMenu">
+  <div ngMenu class="menu menu w-120 rounded-md bg-white shadow-lg" #repoMenu="ngMenu">
     <ng-template ngMenuContent>
-      <div id="{{ repository().id }}" class="text-lg font-semibold px-4 py-2 mb-2 truncate border-b-1 border-gray-200">
+      <div id="{{ repository().id }}" class="menu-header text-lg font-semibold px-4 py-2 mb-2 truncate">
         {{
         repository().name }}</div>
       <div role="group" aria-labelledby="{{ repository().id }}">
         <div ngMenuItem value="View on GitHub" (click)="openGithubUrl()">View on GitHub</div>
+        <div ngMenuItem value="Issued on GitHub" (click)="openGithubIssuesUrl()">View GitHub Issues</div>
+        <div role="separator" aria-orientation="horizontal" class="separator"></div>
         <div ngMenuItem value="Copy GitHub URL" (click)="copyGithubUrl()">Copy GitHub URL</div>
         <div ngMenuItem value="Copy SSH URL" (click)="copySshUrl()">Copy SSH URL</div>
         <div ngMenuItem value="Copy GitHub CLI" (click)="copyGithubCli()">Copy GitHub CLI</div>

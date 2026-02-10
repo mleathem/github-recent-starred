@@ -1,11 +1,10 @@
 // ** Menu - based on 'basic' style https://angular.dev/guide/aria/menu
-//
 :host {
   position: relative;
   --page-background: #fff;
   --border-color: #ccc;
   --focus-color: var(--color-blue-600);
-  --backdrop-bg: rgba(255, 255, 255, 0.25);
+  --backdrop-bg: rgba(1, 1, 1, 0.25);
   --backdrop-blur: 2px;
 }
 [ngMenu] {
@@ -30,31 +29,11 @@
   }
 }
 
-// @import url('https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined');
-// :host {
-//   display: flex;
-//   justify-content: center;
-//   font-family: var(--inter-font);
-//   --border-color: color-mix(in srgb, var(--full-contrast) 20%, var(--page-background));
-// }
-
 [ngMenuTrigger] {
-  // display: flex;
   cursor: pointer;
-  // align-items: center;
-  // padding: 0.6rem 2rem;
-  // border-radius: 0.5rem;
-  // color: var(--primary-contrast);
-  // border: 1px solid var(--border-color);
-  // background-color: var(--page-background);
-
-  // [ngMenuTrigger] .icon {
-  //   font-size: 1.5rem;
-  //   opacity: 0.875;
 }
 [ngMenu] {
   margin: 0;
-  width: 15rem;
   padding: 0.25rem;
   border-radius: 0.5rem;
   border: 1px solid var(--border-color);
@@ -77,15 +56,8 @@
   padding-block: calc(var(--spacing) * 2);
   padding-inline: calc(var(--spacing) * 4);
 }
-// [ngMenuTrigger]{
-//   &:focus,
-//   &:hover {
-//     background: color-mix(in srgb, var(--focus-color) 10%, transparent);
-//     *.bg-gray-200 {
-//       background: color-mix(in srgb, var(--focus-color) 10%, transparent);
-//     }
 
-button[ngMenuTrigger] {
+[ngMenuTrigger] {
   display: flex;
   width: 100%;
   text-align: left;
@@ -112,17 +84,11 @@ button[ngMenuTrigger] {
   }
 }
 
-// /* Fallback for browsers without :focus-visible support */
-// @supports not selector(:focus-visible) {
-// button:focus {
-// outline: 3px dashed orange;
-// }
-// }
-
 [ngMenuTrigger][aria-expanded='true'] {
   background: color-mix(in srgb, var(--focus-color) 10%, transparent);
 }
 
+// ** Items
 [ngMenuItem][data-active='true'] {
   background: color-mix(in srgb, var(--focus-color) 10%, transparent);
 }
@@ -132,4 +98,12 @@ button[ngMenuTrigger] {
 }
 [ngMenuItem]:active {
   color: var(--link-color-active);
+}
+.menu-header {
+  border-bottom: 1px solid var(--border-color);
+}
+.separator {
+  border-top: 1px solid var(--border-color);
+  margin: 0.25rem 0;
+  opacity: 0.5;
 }
