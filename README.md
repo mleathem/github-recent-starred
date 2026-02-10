@@ -1,3 +1,14 @@
+# Project Overview
+
+Development challenge: Angular - "implement a small webapp that will list the most starred Github repos that were created in the last 30 days. You'll be fetching the sorted JSON data directly from the Github API". The app has additional features:
+
+- GDPR permission: before the third-party API request is made, the user must click a checkbox to agree they are aware a third-party may gain IP data
+- Context menu - pertaining to the Github Repository (URL, issues URL, Copy clone command etc)
+
+# Demo URL
+
+https://demo.leathem.de/github-recent-starred/
+
 # GithubRecentStarred
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
