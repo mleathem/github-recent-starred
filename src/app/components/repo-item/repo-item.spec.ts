@@ -11,6 +11,7 @@ describe('RepoItemComponent', () => {
 
   const mockRepository: GithubRepository = {
     name: 'test-repo',
+    id: '123456ID',
     html_url: 'https://github.com/test/test-repo',
     description: 'A test repository',
     stargazers_count: 100,
