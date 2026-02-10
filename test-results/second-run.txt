@@ -11,7 +11,7 @@ Application bundle generation complete. [5.254 seconds] - 2026-02-09T08:08:01.45
 
 Watch mode enabled. Watching for file changes...
 
- DEV  v4.0.18 C:/.../angular-projects/github-recent-starred
+ DEV  v4.0.18 C:/.../github-recent-starred
 
  ✓  github-recent-starred  src/app/app.spec.ts (2 tests) 190ms
    ✓ App (2)
