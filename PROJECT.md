@@ -14,6 +14,7 @@ Development challenge: Angular - "implement a small webapp that will list the mo
 - Vitest (as default in v21)
 - ESLint + Prettier
 - Tailwind
+- Angular Aria (new as of v21) for the repo-item menu
 
 # How to Run
 
@@ -24,6 +25,14 @@ standard as default project - see README
 - First test run - test-results/first-run.txt
 - Last test run - test-results/last-run.txt
 
-- Success first test pass - test-results/second-run.txt
+- Success test first pass - test-results/second-run.txt
 
-# Notes
+# Notes / bugs
+
+For the conext menu (in `repo-item` component) Angular Aria was used. This seems to give good accessibility support, but during testing the keyboard tab key behaviour is unexpected - to replicate:
+
+- tab to repo item
+- 'Enter' to open menu
+- the arrow up down can be used to select menu items (as expected). But the tab key closes the menu.
+- Note: escape closes menu as expected
+  This may well be correct, but further research could be done to ensure correct behaviour.
