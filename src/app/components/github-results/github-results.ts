@@ -101,7 +101,7 @@ export class GithubResultsComponent {
     this.fetchPage(nextPage);
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     if (this.intersectionObserver) {
       this.intersectionObserver.disconnect();
     }

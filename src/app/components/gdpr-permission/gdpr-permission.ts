@@ -17,19 +17,19 @@ export class GdprPermissionComponent {
     this.isChecked.set(stored.granted);
   }
 
-  onCheckboxChange(event: Event): void {
+  public onCheckboxChange(event: Event): void {
     const target = event.target as HTMLInputElement;
     this.isChecked.set(target.checked);
   }
 
-  onSave(): void {
+  public onSave(): void {
     if (this.isChecked()) {
       GdprPermissionStorage.save({ granted: true });
       this.permissionGranted.emit();
     }
   }
 
-  static hasPermission(): boolean {
+  public static hasPermission(): boolean {
     return GdprPermissionStorage.load().granted;
   }
 }
