@@ -14,6 +14,10 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --link-color: var(--color-blue-600);
+  --link-color-hover: var(--color-blue-700);
+  --link-color-active: var(--color-blue-800);
 }
 
 .heading-lg {

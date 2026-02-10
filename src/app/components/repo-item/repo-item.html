@@ -1,22 +1,44 @@
-<article class="flex gap-4 p-3">
-  <div class="flex-shrink-0 self-center">
-    <img [src]="repository().owner.avatar_url" [alt]="repository().owner.login" class="w-22 h-22" />
-  </div>
-  <div class="flex-1 min-w-0">
-    <header>
-      <h2 class="text-lg font-semibold truncate">{{ repository().name }}</h2>
-      <p class="text-gray-600 text-sm line-clamp-2">
-        {{ repository().description || '-- No description --' }}
-      </p>
-    </header>
-    <div class="flex gap-4 mt-2 text-sm text-gray-500">
-      <span class="inline-flex items-center gap-1 bg-gray-200 px-1 py-1 text-xs font-semibold">⭐ {{
-        repository().stargazers_count }}</span>
-      <span class="inline-flex items-center gap-1 bg-gray-200 px-1 py-1 text-xs font-semibold">📋 {{
-        repository().open_issues_count }} issues</span>
-      <span class="inline-flex items-center gap-1 font-semibold">
-        {{ daysAgoText() }} by <strong class="font-bold">{{ repository().owner.login }}</strong>
-      </span>
+<article>
+  <button ngMenuTrigger [menu]="menu()" class="flex w-full items-start gap-4 p-3 text-left">
+    <div class="flex-shrink-0 self-center">
+      <img [src]="repository().owner.avatar_url" [alt]="repository().owner.login" class="w-22 h-22" />
+
     </div>
+    <div class="flex-1 min-w-0">
+      <header>
+        <h2 class="text-lg font-semibold truncate">{{ repository().name }}</h2>
+
+        <p class="text-gray-600 text-sm line-clamp-2">
+          {{ repository().description || '-- No description --' }}
+        </p>
+      </header>
+      <div class="flex gap-4 mt-2 text-sm text-gray-500 flex-wrap">
+        <span class="inline-flex items-center gap-1 bg-gray-200 px-1 py-1 text-xs font-semibold whitespace-nowrap">⭐ {{
+          repository().stargazers_count }}</span>
+        <span class="inline-flex items-center gap-1 bg-gray-200 px-1 py-1 text-xs font-semibold whitespace-nowrap">📋 {{
+          repository().open_issues_count }} issues</span>
+        <span class="inline-flex items-center gap-1 font-semibold">
+          {{ daysAgoText() }} by <strong class="font-bold">{{ repository().owner.login }}</strong>
+        </span>
+      </div>
+    </div>
+  </button>
+
+  <!-- Inline ARIA menu -->
+  <div ngMenu
+    class="menu w-56 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+    #repoMenu="ngMenu">
+    <ng-template ngMenuContent>
+      <div id="{{ repository().id }}" class="text-lg font-semibold px-4 py-2 mb-2 truncate border-b-1 border-gray-200">
+        {{
+        repository().name }}</div>
+      <div role="group" aria-labelledby="{{ repository().id }}">
+        <div ngMenuItem value="View on GitHub" (click)="openGithubUrl()">View on GitHub</div>
+        <div ngMenuItem value="Copy GitHub URL" (click)="copyGithubUrl()">Copy GitHub URL</div>
+        <div ngMenuItem value="Copy SSH URL" (click)="copySshUrl()">Copy SSH URL</div>
+        <div ngMenuItem value="Copy GitHub CLI" (click)="copyGithubCli()">Copy GitHub CLI</div>
+      </div>
+    </ng-template>
   </div>
+
 </article>

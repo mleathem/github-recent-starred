@@ -1,0 +1,135 @@
+// ** Menu - based on 'basic' style https://angular.dev/guide/aria/menu
+//
+:host {
+  position: relative;
+  --page-background: #fff;
+  --border-color: #ccc;
+  --focus-color: var(--color-blue-600);
+  --backdrop-bg: rgba(255, 255, 255, 0.25);
+  --backdrop-blur: 2px;
+}
+[ngMenu] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+[ngMenuTrigger][aria-expanded='true'] {
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    // transform: translateX(-50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    backdrop-filter: blur(var(--backdrop-blur, 2px));
+    background-color: var(--backdrop-bg);
+  }
+}
+
+// @import url('https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined');
+// :host {
+//   display: flex;
+//   justify-content: center;
+//   font-family: var(--inter-font);
+//   --border-color: color-mix(in srgb, var(--full-contrast) 20%, var(--page-background));
+// }
+
+[ngMenuTrigger] {
+  // display: flex;
+  cursor: pointer;
+  // align-items: center;
+  // padding: 0.6rem 2rem;
+  // border-radius: 0.5rem;
+  // color: var(--primary-contrast);
+  // border: 1px solid var(--border-color);
+  // background-color: var(--page-background);
+
+  // [ngMenuTrigger] .icon {
+  //   font-size: 1.5rem;
+  //   opacity: 0.875;
+}
+[ngMenu] {
+  margin: 0;
+  width: 15rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--page-background);
+}
+[ngMenu][data-visible='false'] {
+  display: none;
+}
+[ngMenuItem] {
+  outline: none;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-blue-600);
+
+  // .text-sm .py-2 .px-4
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  padding-block: calc(var(--spacing) * 2);
+  padding-inline: calc(var(--spacing) * 4);
+}
+// [ngMenuTrigger]{
+//   &:focus,
+//   &:hover {
+//     background: color-mix(in srgb, var(--focus-color) 10%, transparent);
+//     *.bg-gray-200 {
+//       background: color-mix(in srgb, var(--focus-color) 10%, transparent);
+//     }
+
+button[ngMenuTrigger] {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  gap: 1rem;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  // Hover (mouse only)
+  &:hover {
+    background: color-mix(in srgb, var(--focus-color) 10%, transparent);
+  }
+
+  // Remove default focus ring (mouse click)
+  &:focus {
+    background: inherit;
+  }
+
+  // Keyboard-only focus ring
+  &:focus-visible {
+    background: color-mix(in srgb, var(--focus-color) 10%, transparent);
+    outline: 2px solid var(--focus-color);
+  }
+}
+
+// /* Fallback for browsers without :focus-visible support */
+// @supports not selector(:focus-visible) {
+// button:focus {
+// outline: 3px dashed orange;
+// }
+// }
+
+[ngMenuTrigger][aria-expanded='true'] {
+  background: color-mix(in srgb, var(--focus-color) 10%, transparent);
+}
+
+[ngMenuItem][data-active='true'] {
+  background: color-mix(in srgb, var(--focus-color) 10%, transparent);
+}
+[ngMenuItem]:focus {
+  outline: 2px solid var(--focus-color);
+  color: var(--link-color-hover);
+}
+[ngMenuItem]:active {
+  color: var(--link-color-active);
+}
