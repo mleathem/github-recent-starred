@@ -1,8 +1,7 @@
 <article>
   <button ngMenuTrigger [menu]="menu()" class="flex w-full items-start gap-4 p-3 text-left">
     <div class="flex-shrink-0 self-center">
-      <img [src]="repository().owner.avatar_url" [alt]="repository().owner.login" class="w-22 h-22" />
-
+      <img [src]="repository().owner.avatar_url" [alt]="repository().owner.login" class="w-15 h-15 sm:w-22 sm:h-22" />
     </div>
     <div class="flex-1 min-w-0">
       <header>
@@ -17,7 +16,7 @@
           repository().stargazers_count }}</span>
         <span class="inline-flex items-center gap-1 bg-gray-200 px-1 py-1 text-xs font-semibold whitespace-nowrap">📋 {{
           repository().open_issues_count }} issues</span>
-        <span class="inline-flex items-center gap-1 font-semibold">
+        <span class="self-center font-semibold">
           {{ daysAgoText() }} by <strong class="font-bold">{{ repository().owner.login }}</strong>
         </span>
       </div>
@@ -25,7 +24,7 @@
   </button>
 
   <!-- Inline ARIA menu -->
-  <div ngMenu class="menu menu w-120 rounded-md bg-white shadow-lg" #repoMenu="ngMenu">
+  <div ngMenu class="menu rounded-md bg-white shadow-lg" #repoMenu="ngMenu">
     <ng-template ngMenuContent>
       <div id="{{ repository().id }}" class="menu-header text-lg font-semibold px-4 py-2 mb-2 truncate">
         {{
